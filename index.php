@@ -79,11 +79,13 @@ $f3->route('GET|POST /create', function($f3) {
 
 $f3->route('POST /finish', function($f3) {
     if (isset($_POST['outdoor'])) {
-        $_SESSION['outdoor'] = $_POST['outdoor'];
+        $_SESSION['outdoor'] =  implode(", ", $_POST['outdoor']);
     }
+
     if (isset($_POST['indoor'])) {
-        $_SESSION['indoor'] = $_POST['indoor'];
+        $_SESSION['indoor'] =  implode(", ", $_POST['indoor']);
     }
+
     $view = new Template();
     echo $view->render("view/summary.html");
 });

@@ -11,8 +11,24 @@
     <title>Order!</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           rel="stylesheet" >
-
+    <link rel="stylesheet" href="/SDEV328/dating/styles/style.css">
+    <link rel="stylesheet" href="/SDEV328/dating/styles/setstyles.css">
 </head>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar brand" href="#">
+            <img src="/SDEV328/dating/images/balloonxs.png" alt="balloon logo">
+        </a>
+        <div class="navbar-collapse justify-content-end collapse show" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link disabled" href="#">Chat Room</a>
+                <a class="nav-link disabled" href="#">Meet Someone Today!</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Matches</a>
+            </div>
+        </div>
+    </div>
+</nav>
 <div id="pad" style="padding: 2%">
 <h1>Interests</h1>
 <hr>
@@ -23,7 +39,7 @@
         <fieldset>
         <repeat group="{{@indoor}}" value="{{@indoorOption}}">
             <div class="col-md-3 mb-4">
-        <input class="form-check-input" type="checkbox" id="{{@indoor}}" name="{{@indoor}}" value="{{@indoorOption}}">
+        <input class="form-check-input" type="checkbox" id="{{@indoor}}" name="indoor[]" value="{{@indoorOption}}">
             <label class="form-check-label" for="{{@indoor}}"> {{@indoorOption}} </label>
             </div>
         </repeat>
@@ -35,7 +51,7 @@
 
         <repeat group="{{@outdoor}}" value="{{@outdoorOption}}">
             <div class="col-md-3 mb-4">
-            <input class="form-check-input" type="checkbox" id="{{@outdoor}}" name="{{@outdoor}}" value="{{@outdoorOption}}">
+            <input class="form-check-input" type="checkbox" id="{{@outdoor}}" name="outdoor[]" value="{{@outdoorOption}}">
             <label class="form-check-label" for="{{@outdoor}}"> {{@outdoorOption}} </label>
             </div>
         </repeat>
