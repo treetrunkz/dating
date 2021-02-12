@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Authors: Eleanor Carl
+        Date: February 8th, 2021
+        File: createAccount.html
+    -->
+
+    <meta charset="UTF-8">
+    <title>Order!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet" >
+
+</head>
+<body style="padding: 4%">
+<h1>Personal Information</h1>
+<hr>
+
+    <form action="create1" method="post" class="p-6">
+<!--        First Name         -->
+        <div class="form-group">
+            <div class="col-lg-7">
+            <label for="inputName1">First</label>
+                <input type="text" class="form-control" id="inputName1" name="inputName1" placeholder="First Name">
+
+            </div>
+        </div>
+<!--        Last Name          -->
+        <div class="form-group">
+            <div class="col-lg-7">
+            <label for="inputName2">Last</label>
+                <input type="text" class="form-control" id="inputName2" name="inputName2" placeholder="Last Name">
+            </div>
+        </div>
+<!--        Age             -->
+        <div class="form-group">
+            <div class="col-lg-7">
+            <label for="inputAge">Age</label>
+                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="Age">
+            </div>
+        </div>
+<!--        Gender                 -->
+        <div class="col-lg-7">
+        <label>
+            Gender
+        </label>
+        <div class="form-check">
+            <repeat group="{{@gender}}" value="{{@genderOption}}">
+                <input type="radio" class="form-check-input" id="{{@gender}}" name="{{@gender}}" value="{{@genderOption}}">
+                <label class="form-check-label" for="{{@gender}}">{{@genderOption}}</label>
+            </repeat>
+                </input>
+            </div>
+        </div>
+
+<!--        Phone Number       -->
+        <div class="form-group">
+            <div class="col-lg-7">
+            <label for="inputPhone">Phone Number</label>
+                <input type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="#">
+            </div>
+        </div>
+        <p>This form is not protected by a security agreement.</p>
+
+        <div class="form-group">
+            <div class="col-lg-12">
+            </div>
+            <div class="col-md-1" style="float:right;">
+                <input type="submit" class="btn btn-primary" value="Next >>">
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

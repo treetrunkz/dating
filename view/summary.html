@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Authors: Eleanor Carl
+        Date: February 8th, 2021
+        File: createAccount.html
+    -->
+
+    <meta charset="UTF-8">
+    <title>Account Review</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet" >
+
+</head>
+<body>
+<div class="container" style="width: 85%; border: solid grey;">
+    <h1>Dating Website</h1>
+<div class="col-md-6 mb-3">
+    <div style="border: solid grey">Name: {{ @SESSION.inputName1 }} {{ @SESSION.inputName2 }}</div>
+    <div style="border: solid grey">Gender: {{ @SESSION.gender }}</div>
+    <div style="border: solid grey">Age: {{ @SESSION.inputAge }}</div>
+    <div style="border: solid grey">Phone: {{ @SESSION.inputPhone }}</div>
+    <div style="border: solid grey">Email: {{ @SESSION.email }}</div>
+    <div style="border: solid grey">State: {{ @SESSION.state }}</div>
+    <div style="border: solid grey">Seeking: {{ @SESSION.sexual }}</div>
+    <div style="border: solid grey">Interests: {{ @SESSION.outdoor }} {{@SESSION.indoor}}</div>
+</div>
+    <img href="image/sideimg.jpg" style="width: 100%">
+    <div class="col-md-6 mb-3">
+    <div id="biography">
+        <div>Biography: {{@SESSION.biography}}</div>
+    </div>
+    </div>
+
+asd
+</div>

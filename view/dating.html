@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Authors: Eleanor Carl
+        Date: February 8th, 2021
+        File: createAccount.html
+    -->
+
+    <meta charset="UTF-8">
+    <title>Order!</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet" >
+
+</head>
+<body>
+<div id="pad" style="padding: 2%">
+
+<h1>Profile</h1>
+<hr>
+<form action="summary" method="post" class="p-3">
+    <!-- Pet Name Input -->
+    <div style="float: left;">
+    <div class="form-row">
+        <div class="col-md-12 mb-2">
+        <label for="email" class="control-label">Enter your email:
+        <input class="form-control" type="email" id="email" name="email">
+
+        </label>
+        </div>
+
+        <div class="form-row">
+        <div class="col-md-6 mb-3">
+        <label for="state" class="control-label">
+            State
+            <select name="state" id="state" class="form-control">
+                <repeat group="{{@state}}" value="{{@stateOption}}">
+                    <option>{{@stateOption}}</option>
+                </repeat>
+            </select>
+        </label>
+        </div>
+        </div>
+        <!--        Orientation        -->
+
+        <div class="col-lg-12">
+            <label>
+                Seeking
+            </label>
+            <div class="form-check">
+                <repeat group="{{@sexual}}" value="{{@sexualOption}}">
+                    <input type="radio" class="form-check-input" id="{{@sexual}}" name="{{@sexual}}" value="{{@sexualOption}}">
+                    <label class="form-check-label" for="{{@sexual}}">{{@sexualOption}}</label>
+                </repeat>
+                </input>
+            </div>
+        </div>
+    </div>
+    </div>
+        <div class="col-md-6 mb-3 float-right" style="float:right;">
+            <label for="biography" class="control-label">
+                Biography
+            </label>
+                <textarea rows="10" cols = "60" id="biography" name="biography"></textarea>
+        </div>
+
+
+
+    <!-- Submit Button -->
+    <div class="form-group">
+        <div class="col-lg-12">
+        </div>
+        <div class="col-md-1" style="float:right;">
+            <input type="submit" class="btn btn-primary" value="Next >>">
+        </div>
+    </div>
+</form>
+    </div>
+
+</body>
+</html>
