@@ -1,5 +1,5 @@
 {
-  "name": "eleacaco/public_html/SDEV328/food",
+  "name": "eleacaco/public_html/SDEV328/dating",
   "authors": [
     {
       "name": "Eleanor Carl",
@@ -8,5 +8,8 @@
   ],
   "require": {
     "bcosca/fatfree-core": "dev-master"
+  },
+  "autoload": {
+    "classmap": ["model/", "classes/", "controllers/"]
   }
 }

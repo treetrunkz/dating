@@ -35,27 +35,35 @@
 <h1>Personal Information</h1>
 <hr>
 
-    <form action="create1" method="post" class="p-6">
+    <form action="#" method="post" class="p-6">
 <!--        First Name         -->
         <div class="form-group">
             <div class="col-lg-7">
             <label for="inputName1">First</label>
-                <input type="text" class="form-control" id="inputName1" name="inputName1" placeholder="First Name">
-
+                <input type="text" class="form-control" id="inputName1" name="inputName1" placeholder="First Name" value="{{ @userFirstName}}">
+                <check if="{{ isset(@errors['userFirst'}}">
+                    {{@errors['userFirst']}}
+                </check>
             </div>
         </div>
 <!--        Last Name          -->
         <div class="form-group">
             <div class="col-lg-7">
             <label for="inputName2">Last</label>
-                <input type="text" class="form-control" id="inputName2" name="inputName2" placeholder="Last Name">
+                <input type="text" class="form-control" id="inputName2" name="inputName2" placeholder="Last Name" value="{{ @userLastName }}">
+                <check if="{{ isset(@errors['userLast']}}">
+                    {{@errors['userLast']}}
+                </check>
             </div>
         </div>
 <!--        Age             -->
         <div class="form-group">
             <div class="col-lg-7">
             <label for="inputAge">Age</label>
-                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="Age">
+                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="Age" value="{{ @userAge }}">
+                <check if="{{ isset(@errors['userAge']}}">
+                    {{@errors['userAge']}}
+                </check>
             </div>
         </div>
 <!--        Gender                 -->
@@ -65,10 +73,18 @@
         </label>
         <div class="form-check">
             <repeat group="{{@gender}}" value="{{@genderOption}}">
-                <input type="radio" class="form-check-input" id="{{@gender}}" name="{{@gender}}" value="{{@genderOption}}">
-                <label class="form-check-label" for="{{@gender}}">{{@genderOption}}</label>
+                <input><input type="radio"
+                              class="form-check-input"
+                              id="{{@gender}}"
+                              name="{{@gender}}"
+                              value="{{@genderOption}}">
+                <check if="{{ @genderOption == @userGender }}">checked</check>
+                {{ ucfirst(@genderOption) }}
+                </input></label><br>
             </repeat>
-                </input>
+            <check if="{{ isset(@errors['userGender']) }}">
+                {{ @errors['userGender'] }}
+            </check>
             </div>
         </div>
 
@@ -76,9 +92,18 @@
         <div class="form-group">
             <div class="col-lg-7">
             <label for="inputPhone">Phone Number</label>
-                <input type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="#">
+                <input type="text"
+                       class="form-control"
+                       id="inputPhone"
+                       name="inputPhone"
+                       placeholder="#"
+                       value="{{ @userPhone }}">
+                <check if="{{ isset(@errors['userPhone'])" }}>
+                {{ @errors['userPhone'] }}
+                </check>
             </div>
         </div>
+
         <p>This form is not protected by a security agreement.</p>
 
         <div class="form-group">
